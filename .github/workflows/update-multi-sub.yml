@@ -22,8 +22,7 @@ update-subscriptions:
           mkdir -p data
           updated=false
 
-          FAKE_NODE_CONTENT='proxies:
-  - {name: "🚫Fake Node", server: 127.0.0.1, port: 8880, type: vmess, uuid: 1234567890987654321, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: www.local.com}}}'
+          FAKE_NODE_CONTENT='dm1lc3M6Ly9leUoySWpvaU1pSXNJbkJ6SWpvaVZHVnNaV2RvWVhKaGRHOXlMbkJvY0hKbGJuUnBZMnRsZEY5aFpHMXBiaUlzSW1GcFpDSTZJakUwT1RFMk1qZzNNaTFrTXpFMExUUTFOV1l0T1RFeE9TMWlNams0T1RRMU1tTXlOamdpTENKd2IzSjBJam9pTWpBd01URTRJaXdpYVdRaU9pSTJZelUxWldRNU5qVXRZbUkzT1MwME1Ea3lMVGt6TWpVdFpUSXlObVE0TXpBNU1XUXdJaXdpYm1WMElqb2lkM01pTENKMGVYQmxJam9pYm05dVpTSXNJbWh2YzNRaU9pSmxZMkZ1YVc1blpYSXVibUZ1YjNjdVkyOXRJaXdpZEd4eklqb2lkR3h6SW4wPQ=='
 
           declare -A subs=(
             ["sub1.txt"]="$SUB_URL1"
