@@ -1,0 +1,39 @@
+name: Fetch Subs
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # 每6小时触发
+  workflow_dispatch:      # 支持手动触发
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Fetch subscriptions
+        run: python fetch_subs.py
+        env:
+          SUBS_1: ${{ secrets.SUBS_1 }}
+          SUBS_2: ${{ secrets.SUBS_2 }}
+          # 按需添加更多
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add subs/*.txt
+          if ! git diff --cached --quiet; then
+            git commit -m "Update subscriptions"
+            git push
+          else
+            echo "No changes detected"
