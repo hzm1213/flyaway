@@ -1,0 +1,79 @@
+name: Update Multiple Subscriptions
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"  # 每6小时执行
+  workflow_dispatch:
+
+jobs:
+  update-subscriptions:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Download and Compare Subscriptions
+      run: |
+        mkdir -p data
+        updated=false
+
+        # 预定义假节点模板（用于失效时写入）
+        FAKE_NODE_CONTENT='proxies:
+  - {name: "🚫Fake Node", server: 127.0.0.1, port: 8880, type: vmess, uuid: 1234567890987654321, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: www.local.com}}}'
+
+        # 定义订阅清单：文件名 → Secret 环境变量
+        declare -A subs=(
+          ["sub1.txt"]="$SUB_URL1"
+          ["sub2.txt"]="$SUB_URL2"
+          ["sub3.txt"]="$SUB_URL3"
+        )
+
+        for file in "${!subs[@]}"; do
+          url="${subs[$file]}"
+          echo "🔹 Checking $file"
+
+          # 下载内容
+          curl -fsSL --max-time 20 "$url" -o "data/${file}.new" || echo "" > "data/${file}.new"
+
+          # 检查内容是否有效（非空且不为HTML等）
+          if [ ! -s "data/${file}.new" ] || grep -q -E '<html|DOCTYPE|Error|403|404|expired|过期' "data/${file}.new"; then
+            echo "⚠️ Subscription for $file appears invalid, using fake node."
+            echo "$FAKE_NODE_CONTENT" > "data/${file}.new"
+          fi
+
+          # 比对是否变化
+          if [ ! -f "data/$file" ]; then
+            echo "🆕 No existing file for $file, marking as changed."
+            mv "data/${file}.new" "data/$file"
+            updated=true
+          elif ! diff -q "data/$file" "data/${file}.new" >/dev/null; then
+            echo "✅ $file changed, updating."
+            mv "data/${file}.new" "data/$file"
+            updated=true
+          else
+            echo "⚪ No change in $file"
+            rm -f "data/${file}.new"
+          fi
+        done
+
+        echo "updated=$updated" >> $GITHUB_ENV
+
+    - name: Commit and Push Changes
+      if: env.updated == 'true'
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add data/
+        git commit -m "Update subscriptions $(date '+%Y-%m-%d %H:%M:%S')"
+        git push
+
+    - name: No changes detected
+      if: env.updated != 'true'
+      run: echo "No changes detected in any subscription file."
+      shell: bash
+      continue-on-error: true
+      env:
+        SUB_URL1: ${{ secrets.SUB_URL1 }}
+        SUB_URL2: ${{ secrets.SUB_URL2 }}
+        SUB_URL3: ${{ secrets.SUB_URL3 }}
