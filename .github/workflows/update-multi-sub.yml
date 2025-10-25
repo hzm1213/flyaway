@@ -6,65 +6,37 @@ on:
   workflow_dispatch:
 
 jobs:
-update-subscriptions:
+  update-subscriptions:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Download and Compare Subscriptions
-        env:
-          SUB_URL1: ${{ secrets.SUB_URL1 }}
-          SUB_URL2: ${{ secrets.SUB_URL2 }}
-          SUB_URL3: ${{ secrets.SUB_URL3 }}
+      - name: Update subscriptions
         run: |
-          mkdir -p data
-          updated=false
+          declare -A subs
+          subs["sub1.yaml"]="https://example.com/link1"
+          subs["sub2.yaml"]="https://example.com/link2"
 
           FAKE_NODE_CONTENT='dm1lc3M6Ly9leUoySWpvaU1pSXNJbkJ6SWpvaVZHVnNaV2RvWVhKaGRHOXlMbkJvY0hKbGJuUnBZMnRsZEY5aFpHMXBiaUlzSW1GcFpDSTZJakUwT1RFMk1qZzNNaTFrTXpFMExUUTFOV1l0T1RFeE9TMWlNams0T1RRMU1tTXlOamdpTENKd2IzSjBJam9pTWpBd01URTRJaXdpYVdRaU9pSTJZelUxWldRNU5qVXRZbUkzT1MwME1Ea3lMVGt6TWpVdFpUSXlObVE0TXpBNU1XUXdJaXdpYm1WMElqb2lkM01pTENKMGVYQmxJam9pYm05dVpTSXNJbWh2YzNRaU9pSmxZMkZ1YVc1blpYSXVibUZ1YjNjdVkyOXRJaXdpZEd4eklqb2lkR3h6SW4wPQ=='
 
-          declare -A subs=(
-            ["sub1.txt"]="$SUB_URL1"
-            ["sub2.txt"]="$SUB_URL2"
-            ["sub3.txt"]="$SUB_URL3"
-          )
-
           for file in "${!subs[@]}"; do
             url="${subs[$file]}"
-            echo "🔹 Checking $file"
-            curl -fsSL --max-time 20 "$url" -o "data/${file}.new" || echo "" > "data/${file}.new"
-
-            if [ ! -s "data/${file}.new" ] || grep -q -E '<html|DOCTYPE|Error|403|404|expired|过期' "data/${file}.new"; then
-              echo "⚠️ Subscription for $file appears invalid, using fake node."
-              echo "$FAKE_NODE_CONTENT" > "data/${file}.new"
-            fi
-
-            if [ ! -f "data/$file" ]; then
-              echo "🆕 No existing file for $file, marking as changed."
-              mv "data/${file}.new" "data/$file"
-              updated=true
-            elif ! diff -q "data/$file" "data/${file}.new" >/dev/null; then
-              echo "✅ $file changed, updating."
-              mv "data/${file}.new" "data/$file"
-              updated=true
+            echo "Fetching $file from $url"
+            if curl -fsSL "$url" -o "$file"; then
+              echo "✅ $file updated successfully."
             else
-              echo "⚪ No change in $file"
-              rm -f "data/${file}.new"
+              echo "⚠️ $file update failed, writing default content."
+              echo "$FAKE_NODE_CONTENT" > "$file"
             fi
           done
 
-          echo "updated=$updated" >> $GITHUB_ENV
-
-      - name: Commit and Push Changes
-        if: env.updated == 'true'
+      - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/
-          git commit -m "Update subscriptions $(date '+%Y-%m-%d %H:%M:%S')"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff --quiet && echo "No changes to commit" && exit 0
+          git commit -m "Update subscriptions"
           git push
-
-      - name: No changes detected
-        if: env.updated != 'true'
-        run: echo "No changes detected in any subscription file."
