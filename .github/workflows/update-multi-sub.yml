@@ -13,21 +13,28 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Update subscriptions
+      - name: Update Base64 subscriptions
         run: |
+          # 定义订阅文件及对应的订阅链接
           declare -A subs
-          subs["sub1.yaml"]="https://example.com/link1"
-          subs["sub2.yaml"]="https://example.com/link2"
+          subs["sub1.txt"]="https://example.com/link1"
+          subs["sub2.txt"]="https://example.com/link2"
 
-          FAKE_NODE_CONTENT='dm1lc3M6Ly9leUoySWpvaU1pSXNJbkJ6SWpvaVZHVnNaV2RvWVhKaGRHOXlMbkJvY0hKbGJuUnBZMnRsZEY5aFpHMXBiaUlzSW1GcFpDSTZJakUwT1RFMk1qZzNNaTFrTXpFMExUUTFOV1l0T1RFeE9TMWlNams0T1RRMU1tTXlOamdpTENKd2IzSjBJam9pTWpBd01URTRJaXdpYVdRaU9pSTJZelUxWldRNU5qVXRZbUkzT1MwME1Ea3lMVGt6TWpVdFpUSXlObVE0TXpBNU1XUXdJaXdpYm1WMElqb2lkM01pTENKMGVYQmxJam9pYm05dVpTSXNJbWh2YzNRaU9pSmxZMkZ1YVc1blpYSXVibUZ1YjNjdVkyOXRJaXdpZEd4eklqb2lkR3h6SW4wPQ=='
+          # 备用节点 Base64（安全多行方式）
+          FAKE_NODE_CONTENT=$(
+          cat <<'EOF'
+dm1lc3M6Ly9leUoySWpvaU1pSXNJbkJ6SWpvaVZHVnNaV2RvWVhKaGRHOXlMbkJvY0hKbGJuUnBZMnRsZEY5aFpHMXBiaUlzSW1GcFpDSTZJakUwT1RFMk1qZzNNaTFrTXpFMExUUTFOV1l0T1RFeE9TMWlNams0T1RRMU1tTXlOamdpTENKd2IzSjBJam9pTWpBd01URTRJaXdpYVdRaU9pSTJZelUxWldRNU5qVXRZbUkzT1MwME1Ea3lMVGt6TWpVdFpUSXlObVE0TXpBNU1XUXdJaXdpYm1WMElqb2lkM01pTENKMGVYQmxJam9pYm05dVpTSXNJbWh2YzNRaU9pSmxZMkZ1YVc1blpYSXVibUZ1YjNjdVkyOXRJaXdpZEd4eklqb2lkR3h6SW4wPQ==
+EOF
+          )
 
+          # 遍历每个订阅文件
           for file in "${!subs[@]}"; do
             url="${subs[$file]}"
             echo "Fetching $file from $url"
             if curl -fsSL "$url" -o "$file"; then
               echo "✅ $file updated successfully."
             else
-              echo "⚠️ $file update failed, writing default content."
+              echo "⚠️ $file update failed, writing default Base64 content."
               echo "$FAKE_NODE_CONTENT" > "$file"
             fi
           done
@@ -38,5 +45,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           git diff --quiet && echo "No changes to commit" && exit 0
-          git commit -m "Update subscriptions"
+          git commit -m "Update Base64 subscriptions"
           git push
