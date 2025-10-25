@@ -22,11 +22,9 @@ jobs:
           mkdir -p data
           updated=false
 
-          # 预定义假节点模板（用于失效时写入）
           FAKE_NODE_CONTENT='proxies:
   - {name: "🚫Fake Node", server: 127.0.0.1, port: 8880, type: vmess, uuid: 1234567890987654321, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: www.local.com}}}'
 
-          # 定义订阅清单：文件名 → Secret 环境变量
           declare -A subs=(
             ["sub1.txt"]="$SUB_URL1"
             ["sub2.txt"]="$SUB_URL2"
@@ -36,17 +34,13 @@ jobs:
           for file in "${!subs[@]}"; do
             url="${subs[$file]}"
             echo "🔹 Checking $file"
-
-            # 下载内容
             curl -fsSL --max-time 20 "$url" -o "data/${file}.new" || echo "" > "data/${file}.new"
 
-            # 检查内容是否有效
             if [ ! -s "data/${file}.new" ] || grep -q -E '<html|DOCTYPE|Error|403|404|expired|过期' "data/${file}.new"; then
               echo "⚠️ Subscription for $file appears invalid, using fake node."
               echo "$FAKE_NODE_CONTENT" > "data/${file}.new"
             fi
 
-            # 比对是否变化
             if [ ! -f "data/$file" ]; then
               echo "🆕 No existing file for $file, marking as changed."
               mv "data/${file}.new" "data/$file"
