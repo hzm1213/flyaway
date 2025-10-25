@@ -25,6 +25,7 @@ jobs:
         env:
           SUBS_1: ${{ secrets.SUBS_1 }}
           SUBS_2: ${{ secrets.SUBS_2 }}
+          SUBS_3: ${{ secrets.SUBS_3 }}
           # 按需添加更多
 
       - name: Commit and push changes
