@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  update-subscriptions:
+update-subscriptions:
     runs-on: ubuntu-latest
 
     steps:
