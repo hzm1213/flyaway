@@ -1,1 +1,258 @@
-dmxlc3M6Ly83OTM3ZDY2My1hM2JmLTQyMTgtOTI5NS1lZGZhMjI0YjcyYzRAZmJpLmdvdjo0NDM/ZW5jcnlwdGlvbj1ub25lJnNlY3VyaXR5PXRscyZzbmk9ZmVpLjYzNDY3Ni54eXomYWxwbj1oMyZmcD1yYW5kb20mdHlwZT13cyZob3N0PWZlaS42MzQ2NzYueHl6JnBhdGg9JTJGJTNGZWQlM0QyNTYwI1RHJTQwWkRZWjIlMjAlRTUlODUlQjMlRTYlQjMlQThURyVFOSVBMiU5MSVFOSU4MSU5MyVFOCU4RSVCNyVFNSU4RiU5NiVFNiU5QiVCNCVFNSVBNCU5QSVFNSU4NSU4RCVFOCVCNCVCOSVFOCU4QSU4MiVFNyU4MiVCOQp2bGVzczovLzc5MzdkNjYzLWEzYmYtNDIxOC05Mjk1LWVkZmEyMjRiNzJjNEAxMDQuMjEuMjM4LjI6MjA5Nj9lbmNyeXB0aW9uPW5vbmUmc2VjdXJpdHk9dGxzJnNuaT1mZWkuNjM0Njc2Lnh5eiZhbHBuPWgzJmZwPXJhbmRvbSZ0eXBlPXdzJmhvc3Q9ZmVpLjYzNDY3Ni54eXomcGF0aD0lMkYlM0ZlZCUzRDI1NjAjVEclNDBaRFlaMiUyMCVFNyVBNiU4MSVFNiVBRCVBMiVFNyU4OCVBQyVFNSU4RiU5NiVFNiU5QyVBQyVFOCVBRSVBMiVFOSU5OCU4NSVFOCU4QSU4MiVFNyU4MiVCOQp2bGVzczovLzc5MzdkNjYzLWEzYmYtNDIxOC05Mjk1LWVkZmEyMjRiNzJjNEA0Ni4yMzIuMTA4LjIxNzo0NDM5P2VuY3J5cHRpb249bm9uZSZzZWN1cml0eT10bHMmc25pPWZlaS42MzQ2NzYueHl6JmFscG49aDMmZnA9cmFuZG9tJnR5cGU9d3MmaG9zdD1mZWkuNjM0Njc2Lnh5eiZwYXRoPSUyRiUzRmVkJTNEMjU2MCMlNDBURyU0MFpEWVoyJTIwSEsxCnZsZXNzOi8vNzkzN2Q2NjMtYTNiZi00MjE4LTkyOTUtZWRmYTIyNGI3MmM0QDQ3LjI0MC4xNzMuMTAyOjkwOTU/ZW5jcnlwdGlvbj1ub25lJnNlY3VyaXR5PXRscyZzbmk9ZmVpLjYzNDY3Ni54eXomYWxwbj1oMyZmcD1yYW5kb20mdHlwZT13cyZob3N0PWZlaS42MzQ2NzYueHl6JnBhdGg9JTJGJTNGZWQlM0QyNTYwI1RHJTQwWkRZWjIlMjBISzIKdmxlc3M6Ly83OTM3ZDY2My1hM2JmLTQyMTgtOTI5NS1lZGZhMjI0YjcyYzRAMTIxLjE0LjEzMS4xMzY6NzAwMD9lbmNyeXB0aW9uPW5vbmUmc2VjdXJpdHk9dGxzJnNuaT1mZWkuNjM0Njc2Lnh5eiZhbHBuPWgzJmZwPXJhbmRvbSZ0eXBlPXdzJmhvc3Q9ZmVpLjYzNDY3Ni54eXomcGF0aD0lMkYlM0ZlZCUzRDI1NjAjVEclNDBaRFlaMiUyMEhLMwp2bGVzczovLzc5MzdkNjYzLWEzYmYtNDIxOC05Mjk1LWVkZmEyMjRiNzJjNEAxMDMuNDQuMjU1LjgxOjQ0Mz9lbmNyeXB0aW9uPW5vbmUmc2VjdXJpdHk9dGxzJnNuaT1mZWkuNjM0Njc2Lnh5eiZhbHBuPWgzJmZwPXJhbmRvbSZ0eXBlPXdzJmhvc3Q9ZmVpLjYzNDY3Ni54eXomcGF0aD0lMkYlM0ZlZCUzRDI1NjAjVEclNDBaRFlaMiUyMEhLNAp2bGVzczovLzc5MzdkNjYzLWEzYmYtNDIxOC05Mjk1LWVkZmEyMjRiNzJjNEA1Mi4xODcuMTA1LjE5OjQ0Mz9lbmNyeXB0aW9uPW5vbmUmc2VjdXJpdHk9dGxzJnNuaT1mZWkuNjM0Njc2Lnh5eiZhbHBuPWgzJmZwPXJhbmRvbSZ0eXBlPXdzJmhvc3Q9ZmVpLjYzNDY3Ni54eXomcGF0aD0lMkYlM0ZlZCUzRDI1NjAjVEclNDBaRFlaMiUyMFNHMQp2bGVzczovLzc5MzdkNjYzLWEzYmYtNDIxOC05Mjk1LWVkZmEyMjRiNzJjNEA0My4xNTYuNjcuMTk3OjI4NDQzP2VuY3J5cHRpb249bm9uZSZzZWN1cml0eT10bHMmc25pPWZlaS42MzQ2NzYueHl6JmFscG49aDMmZnA9cmFuZG9tJnR5cGU9d3MmaG9zdD1mZWkuNjM0Njc2Lnh5eiZwYXRoPSUyRiUzRmVkJTNEMjU2MCNURyU0MFpEWVoyJTIwU0cyCnZsZXNzOi8vNzkzN2Q2NjMtYTNiZi00MjE4LTkyOTUtZWRmYTIyNGI3MmM0QDEwMS4zMi4xNjguMTU1OjI4NDQzP2VuY3J5cHRpb249bm9uZSZzZWN1cml0eT10bHMmc25pPWZlaS42MzQ2NzYueHl6JmFscG49aDMmZnA9cmFuZG9tJnR5cGU9d3MmaG9zdD1mZWkuNjM0Njc2Lnh5eiZwYXRoPSUyRiUzRmVkJTNEMjU2MCNURyU0MFpEWVoyJTIwU0czCnZsZXNzOi8vNzkzN2Q2NjMtYTNiZi00MjE4LTkyOTUtZWRmYTIyNGI3MmM0QDQ3Ljc5Ljg5LjE0NTo4NDQzP2VuY3J5cHRpb249bm9uZSZzZWN1cml0eT10bHMmc25pPWZlaS42MzQ2NzYueHl6JmFscG49aDMmZnA9cmFuZG9tJnR5cGU9d3MmaG9zdD1mZWkuNjM0Njc2Lnh5eiZwYXRoPSUyRiUzRmVkJTNEMjU2MCNURyU0MFpEWVoyJTIwSlAxCnZsZXNzOi8vNzkzN2Q2NjMtYTNiZi00MjE4LTkyOTUtZWRmYTIyNGI3MmM0QDEuMjQzLjIwMi4zMjo1MDAwMT9lbmNyeXB0aW9uPW5vbmUmc2VjdXJpdHk9dGxzJnNuaT1mZWkuNjM0Njc2Lnh5eiZhbHBuPWgzJmZwPXJhbmRvbSZ0eXBlPXdzJmhvc3Q9ZmVpLjYzNDY3Ni54eXomcGF0aD0lMkYlM0ZlZCUzRDI1NjAjVEclNDBaRFlaMiUyMEtSMQp2bGVzczovLzc5MzdkNjYzLWEzYmYtNDIxOC05Mjk1LWVkZmEyMjRiNzJjNEAxNzUuMTI0LjIxMy4xNDQ6NTAwMDE/ZW5jcnlwdGlvbj1ub25lJnNlY3VyaXR5PXRscyZzbmk9ZmVpLjYzNDY3Ni54eXomYWxwbj1oMyZmcD1yYW5kb20mdHlwZT13cyZob3N0PWZlaS42MzQ2NzYueHl6JnBhdGg9JTJGJTNGZWQlM0QyNTYwI1RHJTQwWkRZWjIlMjBLUjIKdmxlc3M6Ly83OTM3ZDY2My1hM2JmLTQyMTgtOTI5NS1lZGZhMjI0YjcyYzRAMTgzLjIzNi41MS4yMjA6NzAwMj9lbmNyeXB0aW9uPW5vbmUmc2VjdXJpdHk9dGxzJnNuaT1mZWkuNjM0Njc2Lnh5eiZhbHBuPWgzJmZwPXJhbmRvbSZ0eXBlPXdzJmhvc3Q9ZmVpLjYzNDY3Ni54eXomcGF0aD0lMkYlM0ZlZCUzRDI1NjAjVEclNDBaRFlaMiUyMFRXMQp2bGVzczovLzc5MzdkNjYzLWEzYmYtNDIxOC05Mjk1LWVkZmEyMjRiNzJjNEAxMTYuMjMwLjEyOS4xNjY6MjIzND9lbmNyeXB0aW9uPW5vbmUmc2VjdXJpdHk9dGxzJnNuaT1mZWkuNjM0Njc2Lnh5eiZhbHBuPWgzJmZwPXJhbmRvbSZ0eXBlPXdzJmhvc3Q9ZmVpLjYzNDY3Ni54eXomcGF0aD0lMkYlM0ZlZCUzRDI1NjAjVEclNDBaRFlaMiUyMFVTMQp2bGVzczovLzc5MzdkNjYzLWEzYmYtNDIxOC05Mjk1LWVkZmEyMjRiNzJjNEA0My4xNTMuMTAzLjE2Mzo4OTgwP2VuY3J5cHRpb249bm9uZSZzZWN1cml0eT10bHMmc25pPWZlaS42MzQ2NzYueHl6JmFscG49aDMmZnA9cmFuZG9tJnR5cGU9d3MmaG9zdD1mZWkuNjM0Njc2Lnh5eiZwYXRoPSUyRiUzRmVkJTNEMjU2MCNURyU0MFpEWVoyJTIwVVMy
+proxies:
+    - encryption: none
+      name: "\U0001F1EF\U0001F1F5JP_1|1.0MB/s"
+      network: ws
+      port: 2096
+      server: 108.162.198.24
+      servername: kuangbao.xiejiang.dpdns.org
+      tls: true
+      type: vless
+      uuid: 5aba5b77-48eb-4ae2-b60d-5bfee7ac169e
+      ws-opts:
+        headers:
+            Host: kuangbao.xiejiang.dpdns.org
+        path: /?ed=2560
+    - alpn:
+        - h3
+      auth-str: dongtaiwang.com
+      auth_str: dongtaiwang.com
+      delay: 2504
+      down: 55
+      name: "\U0001F1EB\U0001F1F7FR_1|1.5MB/s"
+      port: 35511
+      protocol: udp
+      server: 62.210.10.186
+      skip-cert-verify: true
+      sni: apple.com
+      type: hysteria
+      udp: true
+      up: 11
+    - alpn:
+        - h3
+      auth-str: dongtaiwang.com
+      down: "55"
+      name: "\U0001F1F3\U0001F1F1NL_1|1.1MB/s"
+      port: 49003
+      protocol: udp
+      server: 51.159.226.1
+      skip-cert-verify: true
+      sni: apple.com
+      type: hysteria
+      up: "11"
+    - cipher: chacha20-ietf
+      name: "\U0001F1ED\U0001F1F0HK_1|3.5MB/s"
+      password: asd123456
+      port: 8388
+      server: 103.149.183.154
+      type: ss
+    - alterId: "2"
+      cipher: auto
+      name: "\U0001F1EE\U0001F1F9IT_1|1.4MB/s"
+      network: tcp
+      port: "30805"
+      server: v5.heduian.link
+      skip-cert-verify: false
+      tls: false
+      type: vmess
+      udp: true
+      uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+      xudp: true
+    - client-fingerprint: chrome
+      name: "\U0001F1F3\U0001F1F1NL_2|1.1MB/s"
+      network: ws
+      password: 35f8e682-54bd-42c7-b537-94a8e4c84bcd
+      port: "443"
+      server: 89.110.120.197
+      skip-cert-verify: false
+      sni: joss.gpj1.web.id
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+        path: /Free-VPN-CF-Geo-Project/89.110.120.197=443
+    - client-fingerprint: chrome
+      fingerprint: ""
+      name: "\U0001F1FA\U0001F1F8US_1|3.7MB/s"
+      network: ws
+      port: 80
+      server: 104.19.170.195
+      servername: ICy-BlOCK-391B.vegoL19611.woRKERs.deV
+      tls: false
+      type: vless
+      udp: false
+      uuid: 9c622e21-09f2-4393-a947-5c7cd64cc81c
+      ws-opts:
+        headers:
+            host: ICy-BlOCK-391B.vegoL19611.woRKERs.deV
+        path: /cxjZzzE5J9pUZGKTpJ
+    - alterId: 0
+      cipher: auto
+      name: "\U0001F1ED\U0001F1F0HK_2|1.5MB/s"
+      network: ws
+      port: 443
+      server: 154.21.201.83
+      servername: hk.nbee.pp.ua
+      tls: true
+      type: vmess
+      uuid: 4bf075f5-4d5e-4d39-f5ab-b32a86250f0e
+      ws-opts:
+        headers:
+            Host: hk.nbee.pp.ua
+        path: /aa
+    - encryption: none
+      name: "\U0001F1F8\U0001F1ECSG_1|1.2MB/s"
+      network: ws
+      port: 28465
+      server: 8.222.209.252
+      servername: kuangbao.xiejiang.dpdns.org
+      tls: true
+      type: vless
+      uuid: 5aba5b77-48eb-4ae2-b60d-5bfee7ac169e
+      ws-opts:
+        headers:
+            Host: kuangbao.xiejiang.dpdns.org
+        path: /?ed=2560
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1F3\U0001F1F1NL_3|2.2MB/s"
+      password: 741kWqe81Pp8YTsXxter6g
+      port: "6462"
+      server: 93.183.91.172
+      type: ss
+      udp: true
+    - cipher: aes-256-cfb
+      name: "\U0001F1FB\U0001F1F3VN_1|1.2MB/s"
+      password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+      port: "38388"
+      server: 103.186.154.38
+      type: ss
+      udp: true
+    - auth: b9b23931-fcce-408e-909d-0bfe16569215
+      name: "\U0001F1E9\U0001F1EADE_1|4.4MB/s"
+      obfs: salamander
+      obfs-password: MTAzM2E2MWQzNjhlMDhkZA==
+      password: b9b23931-fcce-408e-909d-0bfe16569215
+      port: 41200
+      ports: 41200-41450
+      server: fgsgfgffggfqa.qishuijc.top
+      skip-cert-verify: false
+      sni: fgsgfgffggfqa.qishuijc.top
+      type: hysteria2
+      udp: true
+    - cipher: aes-256-cfb
+      name: "\U0001F1FB\U0001F1F3VN_2|1.6MB/s"
+      password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+      port: 38388
+      server: 103.186.154.66
+      type: ss
+      udp: true
+    - alpn:
+        - ""
+      alterId: "0"
+      cipher: auto
+      name: "\U0001F1E9\U0001F1EADE_2|1.2MB/s"
+      network: tcp
+      port: "8880"
+      server: 91.99.167.110
+      skip-cert-verify: false
+      tls: false
+      type: vmess
+      udp: true
+      uuid: c3d17538-ce18-4e1e-8572-16f56d1aa268
+      xudp: true
+    - alpn:
+        - h3
+      client-fingerprint: random
+      encryption: none
+      name: "\U0001F1FA\U0001F1F8US_2|2.5MB/s"
+      network: ws
+      port: "443"
+      server: 130.33.68.45
+      servername: s3.sni565.netlib.re
+      tls: true
+      type: vless
+      udp: true
+      uuid: 69228a95-e9cb-b1ff-40d2-7315d9d4b9b7
+      ws-opts:
+        headers:
+            Host: s3.sni565.netlib.re
+            User-Agent: Mozilla/5.0 (Linux; Android 6.0.1; vivo 1603 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.83 Mobile Safari/537.36
+        path: /proxyip=tw.sni2025.netlib.re
+      xudp: true
+    - cipher: chacha20-ietf-poly1305
+      name: "\U0001F1F9\U0001F1FCTW_1|1.3MB/s"
+      password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
+      plugin: obfs
+      plugin-opts:
+        host: 16a89ef:154955
+        mode: tls
+      port: "2377"
+      server: 118.163.200.40
+      type: ss
+      udp: true
+    - alpn:
+        - h2
+        - http/1.1
+      client-fingerprint: chrome
+      encryption: none
+      name: "\U0001F1EB\U0001F1EEFI_1|2.5MB/s"
+      network: ws
+      port: "2087"
+      server: www.researchgate.net
+      servername: interimrita.shividpolo.store
+      tls: true
+      type: vless
+      udp: true
+      uuid: cd7f3c2f-8d6d-4ad8-98eb-fb10e0f6da9e
+      ws-opts:
+        headers:
+            Host: interimrita.shividpolo.store
+            User-Agent: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
+        path: /downloader?ed=2048
+      xudp: true
+    - client-fingerprint: chrome
+      encryption: none
+      name: "\U0001F1F0\U0001F1F7KR_1|1.9MB/s"
+      network: ws
+      port: "12151"
+      server: 218.151.91.131
+      servername: gaosir.unfeeling.sbs
+      tls: true
+      type: vless
+      udp: true
+      uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
+      ws-opts:
+        headers:
+            Host: gaosir.unfeeling.sbs
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36
+        path: "/Telegram\U0001F1E8\U0001F1F3 @WangCai2 /?ed=2560"
+      xudp: true
+    - client-fingerprint: randomized
+      name: "\U0001F1E8\U0001F1EDCH_1|2.0MB/s"
+      network: ws
+      password: b47dac40-545e-4bae-a09d-1714d457908f
+      port: "443"
+      server: 94.131.12.56
+      skip-cert-verify: false
+      sni: joss.gpj1.web.id
+      type: trojan
+      udp: true
+      ws-opts:
+        headers:
+            User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
+        path: /Free-VPN-CF-Geo-Project/94.131.12.56=443
+    - client-fingerprint: random
+      encryption: none
+      name: "\U0001F1FA\U0001F1F8US_3|1.7MB/s"
+      network: tcp
+      port: "34045"
+      reality-opts:
+        public-key: n8EQpGZysAuZAAqdtwYEa6Ssj0XR7biJ_ONPgaRtRwQ
+        short-id: cb2e50ca28
+      server: vps.azdevops.io
+      servername: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me
+      tls: true
+      type: vless
+      udp: true
+      uuid: e479d314-159a-4c42-9de2-56bb9e7cf53c
+      xudp: true
